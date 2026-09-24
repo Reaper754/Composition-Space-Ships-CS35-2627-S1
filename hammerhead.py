@@ -6,10 +6,7 @@ from components import Weapons
 class Hammerhead:
     def __init__(self):
         self.spaceship_class = "Hammerhead"
-        self.toughness = 10
-        self.speed = 2
-        self.shield_strength = 0
-        self.health = Health()
-        self.shields = Shields()
-        self.engines = Engines()
-        self.weapons = Weapons("Ram", "Anti-Aircraft Turrets")
+        self.health = Health(300)
+        self.shields = Shields(0)
+        self.engines = Engines(3)
+        self.weapons = Weapons("Ram", 400, "Anti-Aircraft Turrets", 20)

@@ -6,10 +6,7 @@ from components import Weapons
 class Dreadnought:
     def __init__(self):
         self.spaceship_class = "Dreadnought"
-        self.toughness = 3
-        self.speed = 1.5
-        self.shield_strength = 1
-        self.health = Health()
-        self.shields = Shields()
-        self.engines = Engines()
-        self.weapons = Weapons("Laser Beams", "Rockets")
+        self.health = Health(100)
+        self.shields = Shields(110)
+        self.engines = Engines(2)
+        self.weapons = Weapons("Laser Beams", 150, "Rockets", 200)

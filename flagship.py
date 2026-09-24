@@ -6,10 +6,7 @@ from components import Weapons
 class Flagship:
     def __init__(self):
         self.spaceship_class = "Flagship"
-        self.toughness = 5
-        self.speed = 1
-        self.shield_strength = 2
-        self.health = Health()
-        self.shields = Shields()
-        self.engines = Engines()
-        self.weapons = Weapons("Plasma Turrets", "Ion Torpedoes")
+        self.health = Health(120)
+        self.shields = Shields(100)
+        self.engines = Engines(1)
+        self.weapons = Weapons("Plasma Turrets", 50, "Ion Torpedoes", 100)
