@@ -1,6 +1,7 @@
 class Health:
-    def __init__(self, health):
+    def __init__(self, health, max):
         self.value = health
+        self.max = max
 
     def damage(self, amount):
         self.value -= amount
@@ -9,10 +10,15 @@ class Health:
         else:
             print(f"The ship now has {self.value} health left.")
 
+    def repair(self, amount):
+        self.value += amount
+        print(f"The ship has been repaired and how has {self.value} health left.")
+
 
 class Shields:
-    def __init__(self, shield):
+    def __init__(self, shield, max):
         self.value = shield
+        self.max = max
 
     def damage(self, amount):
         self.value -= amount
@@ -20,6 +26,10 @@ class Shields:
             print("The shields are down.")
         else:
             print(f"The ship now has {self.value} shields left.")
+
+    def restore(self, amount):
+        self.value += amount
+        print(f"The ship's shields are now at {self.value}")
 
 class Engines:
     def __init__(self, power):
@@ -49,7 +59,7 @@ class Weapons:
         self.secondary_damage = secondary_damage
 
     def shoot_p(self):
-        print(f"Primary weapon did {self.primary_damage} to target.")
+        print(f"Primary weapon did {self.primary_damage} damage to target.")
 
     def shoot_s(self):
-        print(f"Secondary weapon did {self.secondary_damage} to target.")
+        print(f"Secondary weapon did {self.secondary_damage} damage to target.")
