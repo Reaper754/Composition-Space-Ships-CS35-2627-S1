@@ -28,6 +28,7 @@ while True:
     try:
         ship = int(input(select))
         if ship == 1:
+            print("type exit to quite.")
             user_input = input(message).strip().lower()
             if user_input == "shoot":
                 fire_type = input(option_shoot).strip().lower()
@@ -73,6 +74,7 @@ while True:
                     break
                 print("Invalid command.")
         elif ship == 2:
+            print("type exit to quite.")
             user_input = input(message).strip().lower()
             if user_input == "shoot":
                 fire_type = int(input(option_shoot))
@@ -118,6 +120,7 @@ while True:
                     break
                 print("Invalid command.")
         elif ship == 3:
+            print("type exit to quite.")
             user_input = input(message).strip().lower()
             if user_input == "shoot":
                 fire_type = int(input(option_shoot))
